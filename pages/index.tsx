@@ -1,7 +1,7 @@
 import React from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { Container } from '../styles/index'
 
 import axios from "axios"
 
@@ -14,9 +14,11 @@ const Maps = ({ maps }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Head>
         <title>Maps | DRL Leaderboards</title>
       </Head>
-      {maps.map((drlMap: any) => (
-        <Map key={drlMap.name} mapName={drlMap.name} />
-      ))}
+      <Container>
+        {maps.map((drlMap: any) => (
+          <Map key={drlMap.name} mapName={drlMap.name} />
+        ))}
+      </Container>
     </>
   )
 }

@@ -1,12 +1,12 @@
 import React from "react"
 
-import { Name } from "./style"
+import { Container, Name } from "./style"
 
 const Map = ({ mapName }: { mapName: string }) => {
   return (
-    <>
+    <Container>
       <Name>{mapName}</Name>
-    </>
+    </Container>
   )
 }
 
