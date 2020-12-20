@@ -14,7 +14,7 @@ const Maps = ({ maps }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Head>
         <title>Maps | DRL Leaderboards</title>
       </Head>
-      {maps.map((drlMap) => (
+      {maps.map((drlMap: any) => (
         <Map key={drlMap.name} mapName={drlMap.name} />
       ))}
     </>
